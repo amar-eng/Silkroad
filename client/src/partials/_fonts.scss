@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Moon2.0";
+  font-weight: Bold;
+  src: url(../assets/moon/Moon2.0-Bold.otf);
+}
+// @font-face {
+//   font-family: "Moon2.0";
+//   font-weight: Regular;
+//   src: url(../assets/Moon2.0-Regular.otf);
+// }
+@font-face {
+  font-family: "Moon2.0";
+  font-weight: Light;
+  src: url(../assets/moon/Moon2.0-Light.otf);
+}
+@mixin bold {
+  font-family: "Moon2.0";
+  font-weight: 600;
+}
+@mixin normal {
+  font-family: "Moon2.0";
+  font-weight: 400;
+}
+@mixin light {
+  font-family: "Moon2.0";
+  font-weight: 100;
+}
