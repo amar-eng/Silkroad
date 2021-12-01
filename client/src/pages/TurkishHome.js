@@ -1,15 +1,15 @@
 import React from "react";
 import "../styles/Home.scss";
 import Hero from "../components/Hero";
-const Home = () => {
+const TurkishHome = () => {
   return (
     <div className="home">
       <Hero
-        subtitle="Re-Introducing Aromatic Resins And Exotic Incense"
-        btn="Explore"
+        subtitle="Aromatik Reçineler ve Egzotik Tütsü Yeniden Tanıtılıyor"
+        btn="keşfetmek"
       />
     </div>
   );
 };
 
-export default Home;
+export default TurkishHome;

@@ -1,16 +1,24 @@
 import React from "react";
 import "../styles/Hero.scss";
-const Hero = () => {
+import Button from "./Button";
+import { Link } from "react-router-dom";
+const Hero = ({ subtitle, btn }) => {
   return (
     <div className="hero">
       <div className="hero__content">
         <h1 className="hero__title">Suad silkroad</h1>
-        <p className="hero__subtitle">
-          Re-introducing Aromatic resins and exotic incense{" "}
-        </p>
+        <p className="hero__subtitle">{subtitle}</p>
+        <div className="hero__btn">
+          <Link to="/" className="hero__links">
+            <Button text="English" />
+          </Link>
+          <Link to="/turkish" className="hero__links">
+            <Button text="Turkish" />
+          </Link>
+        </div>
       </div>
       <div className="hero__button">
-        <div className="hero__button-text">Explore</div>
+        <div className="hero__button-text">{btn}</div>
       </div>
     </div>
   );
