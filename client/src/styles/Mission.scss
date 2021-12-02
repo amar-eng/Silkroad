@@ -1,0 +1,76 @@
+@import "../partials/fonts";
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.mission {
+  background-color: $alice;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__header {
+    @include bold;
+    text-transform: capitalize;
+    font-size: 3.5rem;
+    color: $green;
+    word-spacing: -20px;
+    text-align: center;
+    padding: 1rem 0;
+    width: 90%;
+  }
+  &__subheader {
+    @include light;
+    text-align: center;
+    font-size: 1.7rem;
+    color: $black;
+    word-spacing: -10px;
+    letter-spacing: 2px;
+    width: 90%;
+    @include desktop {
+      width: 60%;
+      font-size: 2rem;
+    }
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 3rem;
+    width: 90%;
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__icon {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  &__title {
+    @include bold;
+    font-size: 2rem;
+    word-spacing: -10px;
+    color: $green;
+    text-align: center;
+  }
+  &__text {
+    @include light;
+    font-size: 1.5rem;
+    color: $black;
+    word-spacing: -5px;
+    letter-spacing: 1px;
+    width: 80%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+.turkish {
+  font-family: inherit;
+  word-spacing: 5px;
+}

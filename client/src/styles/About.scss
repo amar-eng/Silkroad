@@ -1,0 +1,87 @@
+@import "../partials/fonts";
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.resins {
+  background-color: $alice;
+
+  &__name {
+    @include bold;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: $green;
+    word-spacing: -20px;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+.container {
+  background-color: $alice;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $black;
+  flex-direction: column;
+  overflow-x: hidden;
+  @include tablet {
+    flex-direction: row;
+    padding: 1rem;
+  }
+  &__content {
+    width: 100%;
+    padding: 1rem;
+    @include tablet {
+      width: 80%;
+      text-align: center;
+    }
+    @include desktop {
+      width: 50%;
+    }
+  }
+
+  &__title {
+    @include normal;
+    font-size: 2rem;
+    text-transform: capitalize;
+    word-spacing: -10px;
+    @include desktop {
+      font-size: 3rem;
+    }
+  }
+  span {
+    font-style: italic;
+    font-size: 2rem;
+    @include desktop {
+      font-size: 2.5rem;
+    }
+  }
+  &__desc {
+    font-weight: lighter;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+    letter-spacing: 3px;
+    word-spacing: 1px;
+    @include desktop {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__image {
+    margin-bottom: 1rem;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    @include desktop {
+      width: 400px;
+      height: 400px;
+    }
+  }
+}
+.container:nth-child(2n + 1) {
+  // color: $green;
+  @include tablet {
+    flex-direction: row-reverse;
+  }
+}
