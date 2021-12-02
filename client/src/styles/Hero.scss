@@ -93,6 +93,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
+
+    &::after {
+      background-color: transparent;
+      content: "";
+      border-radius: 50%;
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: 0.2s transform ease-in-out;
+      will-change: transform;
+      transform: translate(-100%, 0) rotate(10deg);
+      transform-origin: top left;
+    }
+    &:hover {
+      color: $alice;
+      background-color: $black;
+      transform: scale(1.05);
+      will-change: transform;
+
+      &::after {
+        transform: translate(0, 0) rotate(0deg);
+      }
+    }
+
     @include tablet {
       width: 10%;
       height: 15%;

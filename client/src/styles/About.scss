@@ -9,10 +9,18 @@
     @include bold;
     text-transform: uppercase;
     font-size: 3.5rem;
-    color: $green;
+    color: $silver;
     word-spacing: -20px;
     text-align: center;
-    padding: 1rem 0;
+    padding: 3rem 0;
+    border-bottom: 1px solid $silver;
+    width: 100%;
+    @include tablet {
+      width: 70%;
+    }
+    @include desktop {
+      width: 40%;
+    }
   }
 }
 .container {

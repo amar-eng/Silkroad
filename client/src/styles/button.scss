@@ -14,7 +14,13 @@
   border: none;
   border-radius: 35px;
   cursor: pointer;
-
+  &:hover {
+    background-color: $black;
+    color: $alice;
+    transition: 0.2s transform ease-in-out;
+    font-size: 3.5rem;
+    width: 50%;
+  }
   @include desktop {
     height: 76px;
     width: 100%;
