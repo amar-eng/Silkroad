@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import TurkishHome from "./pages/TurkishHome";
 import "./App.css";
@@ -6,10 +6,10 @@ import "./App.css";
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/turkish" element={<TurkishHome />} />
-      </Routes>
+      <Switch>
+        <Route path="/" component={Home} exact />
+        <Route path="/turkish" component={TurkishHome} />
+      </Switch>
     </>
   );
 }
