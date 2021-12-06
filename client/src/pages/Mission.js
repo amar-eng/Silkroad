@@ -24,6 +24,7 @@ const Mission = () => {
       icon: econ,
     },
   ];
+
   return (
     <div className="mission">
       <h1 className="mission__header">
